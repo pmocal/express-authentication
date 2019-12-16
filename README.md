@@ -1,5 +1,3 @@
 # app
 
-Connect to db with following string: mongodb+srv://parthivm:<password>@cluster0-ra1ki.mongodb.net/test?retryWrites=true&w=majority 
-
-Collection is named users
+Basic app to try out passport library for authentication. Stores user info securely in MongoDB.
