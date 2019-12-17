@@ -1,16 +1,4 @@
 require('dotenv').config()
-var nconf = require('nconf');
-// nconf.argv()
-// 	.env()
-// 	.file({ file: 'path/to/config.json' });
-// nconf.set('database:host', '127.0.0.1');
-// nconf.set('database:port', 5984);
-// nconf.save(function (err) {
-// 	require('fs').readFile('path/to/your/config.json', function (err, data) {
-// 		console.dir(JSON.parse(data.toString()))
-// 	});
-// });
-/////// app.js
 const bcrypt = require("bcryptjs");
 const express = require("express");
 const path = require("path");
@@ -26,12 +14,6 @@ const mongoDb = "mongodb+srv://" + process.env.DB_USER + ":" +
 
 mongoose.connect(mongoDb, { useNewUrlParser: true });
 const db = mongoose.connection;
-// const db = require('db')
-// db.connect({
-//   host: process.env.DB_HOST,
-//   username: process.env.DB_USER,
-//   password: process.env.DB_PASS
-// })
 
 db.on("error", console.error.bind(console, "mongo connection error"));
 
